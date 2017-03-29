@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "PhpLab\\ElasticSearcher\\": "elasticsearcher/src/",
+      "PhpLab\\ShowCase\\": "showcase/src/"
+    }
+  },
+  "require": {
+    "madewithlove/elasticsearcher": "^0.5.0",
+    "tracy/tracy": "^2.4",
+    "fzaninotto/faker": "^1.6"
+  }
+}
