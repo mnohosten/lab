@@ -25,9 +25,14 @@ class LoggingService implements Service
 
     public function execute()
     {
-        $this->logger->notice('Service start' . PHP_EOL);
-        $this->service->execute();
-        $this->logger->notice('Service end' . PHP_EOL);
+        try {
+            $this->service->execute();
+        } catch (\Exception $exception) {
+            $this->logger->notice('Service start' . PHP_EOL);
+
+            $this->logger->notice('Service end' . PHP_EOL);
+        }
+
     }
 
 }

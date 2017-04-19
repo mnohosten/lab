@@ -7,7 +7,7 @@ require_once $autoload;
 
 class A extends \Psr\Log\NullLogger
 {
-    
+
     public function notice($message, array $context = array())
     {
         echo $message;
